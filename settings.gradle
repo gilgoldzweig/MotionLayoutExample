@@ -1,0 +1,2 @@
+rootProject.name='MotionLayoutExample'
+include ':app'
