@@ -8,15 +8,14 @@
 		motion:motionInterpolator="easeInOut">
 		<OnSwipe
 			motion:dragDirection="dragUp"
+			motion:dragScale="1"
 			motion:moveWhenScrollAtTop="true"
 			motion:onTouchUp="stop"
 			motion:touchAnchorId="@id/scrollable_content"
-			motion:touchAnchorSide="top"
-			motion:dragScale="1"/>
+			motion:touchAnchorSide="top" />
 	</Transition>
 
 	<ConstraintSet android:id="@+id/start">
-
 		<Constraint
 			android:id="@id/search_view"
 			android:layout_width="match_parent"
@@ -37,8 +36,7 @@
 			motion:layout_constraintStart_toEndOf="@id/navigation_icon"
 			motion:layout_constraintTop_toTopOf="@id/navigation_icon" />
 
-		<Constraint
-			android:id="@id/navigation_icon">
+		<Constraint android:id="@id/navigation_icon">
 			<CustomAttribute
 				motion:attributeName="ColorFilter"
 				motion:customColorValue="#000000" />
@@ -57,29 +55,28 @@
 			android:layout_width="0dp"
 			android:layout_height="0dp"
 			android:layout_marginTop="16dp"
+			android:layout_marginBottom="16dp"
 			android:elevation="4dp"
+			motion:layout_constraintBottom_toTopOf="@+id/guideline_toolbar"
 			motion:layout_constraintEnd_toStartOf="@id/menu_icon"
 			motion:layout_constraintStart_toEndOf="@id/navigation_icon"
-			motion:layout_constraintTop_toTopOf="parent"
-			motion:layout_constraintBottom_toBottomOf="@+id/toolbar"
-			android:layout_marginBottom="16dp" />
+			motion:layout_constraintTop_toTopOf="parent" />
 
 		<Constraint
 			android:id="@+id/toolbar_title"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:elevation="4dp"
-			motion:layout_constraintStart_toEndOf="@id/navigation_icon"
-			motion:layout_constraintBottom_toTopOf="parent" />
+			motion:layout_constraintBottom_toTopOf="parent"
+			motion:layout_constraintStart_toEndOf="@id/navigation_icon" />
 
 		<Constraint
-			android:id="@+id/guidline_toolbar"
+			android:id="@+id/guideline_toolbar"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			motion:layout_constraintGuide_begin="65dp" />
 
-		<Constraint
-			android:id="@id/navigation_icon">
+		<Constraint android:id="@id/navigation_icon">
 			<CustomAttribute
 				motion:attributeName="ColorFilter"
 				motion:customColorValue="#ffffff" />

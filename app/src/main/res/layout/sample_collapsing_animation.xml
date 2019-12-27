@@ -12,7 +12,7 @@
 		android:layout_height="0dp"
 		android:background="@color/colorPrimary"
 		android:elevation="4dp"
-		app:layout_constraintBottom_toTopOf="@id/guidline_toolbar"
+		app:layout_constraintBottom_toTopOf="@id/guideline_toolbar"
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<androidx.appcompat.widget.AppCompatImageView
@@ -62,7 +62,7 @@
 		app:queryHint="Search" />
 
 	<androidx.constraintlayout.widget.Guideline
-		android:id="@+id/guidline_toolbar"
+		android:id="@+id/guideline_toolbar"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
@@ -77,7 +77,7 @@
 		app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/guidline_toolbar"
+		app:layout_constraintTop_toBottomOf="@id/guideline_toolbar"
 		tools:listitem="@layout/dummy_list_item"/>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
